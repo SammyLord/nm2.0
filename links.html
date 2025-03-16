@@ -56,8 +56,31 @@
 </head>
 <body>
     <div class="container">
-        <!-- Header iframe - works for both desktop and mobile -->
-        <iframe src="header.html" id="header-frame" class="header-frame" frameborder="0" scrolling="no"></iframe>
+        <!-- Header -->
+        <header>
+            <h1 class="site-title">Welcome to NodeMixaholic's Homepage!</h1>
+            <div class="construction">
+                <img src="images/construction.gif" alt="Under Construction">
+                <span>Site last updated: <script>document.write(new Date().toLocaleDateString());</script></span>
+            </div>
+            <marquee scrollamount="3" behavior="scroll" direction="left">Welcome to my personal homepage! Thanks for stopping by!</marquee>
+            <div class="counter">
+                <span>You are visitor #</span>
+                <span id="visitor-count">42069</span>
+            </div>
+        </header>
+
+        <nav>
+            <table class="menu-table">
+                <tr>
+                    <td><a href="index.html">Home</a></td>
+                    <td><a href="about.html">About Me</a></td>
+                    <td><a href="log/blog-posts">Archived Blog</a></td>
+                    <td><a href="log/">Log</a></td>
+                    <td><a href="links.html">Cool Links</a></td>
+                </tr>
+            </table>
+        </nav>
 
         <main>
             <section class="desktop-only">
@@ -169,8 +192,21 @@
             </table>
         </div>
 
-        <!-- Footer iframe -->
-        <iframe src="footer.html" id="footer-frame" class="footer-frame" frameborder="0" scrolling="no"></iframe>
+         <!-- Footer -->
+         <footer>
+            <div class="quotes">
+                <p class="quote">"Find a balance between freedom, comfort, and flexibility; for there is not such thing as full freedom." <span class="quote-author">--me</span></p>
+                <p class="quote">"The AI is just a canvas. It is useless without the paints that are the prompts." <span class="quote-author">--also me</span></p>
+            </div>
+            <p>© 2001-<script>document.write(new Date().getFullYear());</script> Sammy Lord. All rights reserved.</p>
+            <p>Best viewed with Netscape Navigator or Internet Explorer</p>
+            <div class="browser-icons">
+                <img src="images/netscape.gif" alt="Netscape">
+                <img src="images/ie.gif" alt="Internet Explorer">
+            </div>
+            <p>This page is <span id="page-size">12</span>K. Last updated: <script>document.write(new Date().toLocaleDateString());</script></p>
+            <p><a href="index.html">Return to Home</a></p>
+        </footer>
     </div>
     
     <!-- Music is now handled entirely by JavaScript -->
