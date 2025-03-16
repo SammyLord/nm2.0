@@ -2,16 +2,23 @@
  * Background music player for 2000s style website
  * Plays music after first user interaction with the page
  * Music plays once per page load (not tracked across visits)
+ * No music in WAP/mobile version
  */
 
 // Flag to track if music has played during this page visit
 let musicPlayed = false;
 let audioElement = null;
 
+// Helper function to check if user is on WAP/mobile version
+function isWAPVersion() {
+    // Check if the window width is small (mobile) or if WAP element exists
+    return window.innerWidth <= 768 || document.querySelector('.wap-header') !== null;
+}
+
 // Function to play background music once per page load
 function playBackgroundMusic() {
-    // Only play if it hasn't played during this page visit
-    if (!musicPlayed) {
+    // Only play if it hasn't played during this page visit AND not in WAP mode
+    if (!musicPlayed && !isWAPVersion()) {
         // Get the existing audio element
         audioElement = document.getElementById('background-music');
         
@@ -53,8 +60,11 @@ function playBackgroundMusic() {
 
 // Function to add a small music control to the page
 function addMusicControls(audioElement) {
+    // Don't add controls in WAP version
+    if (isWAPVersion()) return;
+    
     const controlDiv = document.createElement('div');
-    controlDiv.className = 'music-controls';
+    controlDiv.className = 'music-controls desktop-only'; // Add desktop-only class
     controlDiv.innerHTML = '<div class="music-icon">🎵</div>' +
                           '<div class="music-controls-inner">' +
                           '<button id="music-pause">Pause Music</button>' +
@@ -92,8 +102,11 @@ function addMusicControls(audioElement) {
 
 // Function to add a play button if auto-play fails
 function addPlayButton(audioElement) {
+    // Don't add play button in WAP version
+    if (isWAPVersion()) return;
+    
     const playButton = document.createElement('div');
-    playButton.className = 'play-music-button';
+    playButton.className = 'play-music-button desktop-only'; // Add desktop-only class
     playButton.innerHTML = '🎵 Play Music';
     
     document.body.appendChild(playButton);
@@ -113,6 +126,12 @@ function addPlayButton(audioElement) {
 
 // Add event listeners to trigger music on first interaction
 function setupMusicTriggers() {
+    // Don't set up music triggers in WAP version
+    if (isWAPVersion()) {
+        console.log('WAP version detected, music disabled');
+        return;
+    }
+    
     // List of events that we'll consider as "interaction"
     const interactionEvents = [
         'click', 'keydown', 'scroll', 'touchstart'
