@@ -34,11 +34,28 @@
         .desktop-device .mobile-footer {
             display: none !important;
         }
+        /* Quote styling */
+        .quotes {
+            margin: 15px 0;
+            font-style: italic;
+        }
+        .quote {
+            margin-bottom: 10px;
+        }
+        .quote-author {
+            font-weight: bold;
+            text-align: right;
+            display: block;
+        }
     </style>
 </head>
 <body>
     <div class="footer-container">
         <div class="desktop-footer">
+            <div class="quotes">
+                <p class="quote">"Find a balance between freedom, comfort, and flexibility; for there is not such thing as full freedom." <span class="quote-author">--me</span></p>
+                <p class="quote">"The AI is just a canvas. It is useless without the paints that are the prompts." <span class="quote-author">--also me</span></p>
+            </div>
             <p>© 2001-<script>document.write(new Date().getFullYear());</script> Sammy Lord. All rights reserved.</p>
             <p>Best viewed with Netscape Navigator or Internet Explorer</p>
             <div class="browser-icons">
@@ -49,6 +66,16 @@
             <p><a href="index.html" target="_parent">Return to Home</a></p>
         </div>
     
+        <div class="mobile-footer">
+            <div class="quotes">
+                <p class="quote">"Find a balance between freedom, comfort, and flexibility; for there is not such thing as full freedom." <span class="quote-author">--me</span></p>
+                <p class="quote">"The AI is just a canvas. It is useless without the paints that are the prompts." <span class="quote-author">--also me</span></p>
+            </div>
+            <p>© 2001-<script>document.write(new Date().getFullYear());</script> Sammy Lord. All rights reserved.</p>
+            <p>Best viewed with Netscape Navigator or IE</p>
+            <p>Last updated: <script>document.write(new Date().toLocaleDateString());</script></p>
+            <p><a href="index.html" target="_parent">Home</a></p>
+        </div>
     </div>
 </body>
 </html> 
