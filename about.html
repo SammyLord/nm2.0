@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - NodeMixaholic's Homepage</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="site-title">About NodeMixaholic</h1>
+            <div class="construction">
+                <img src="images/construction.gif" alt="Under Construction" class="desktop-only">
+                <span>Site last updated: <script>document.write(new Date().toLocaleDateString());</script></span>
+            </div>
+        </header>
+
+        <nav class="desktop-only">
+            <table class="menu-table">
+                <tr>
+                    <td><a href="index.html">Home</a></td>
+                    <td><a href="about.html">About Me</a></td>
+                    <td><a href="blog.html">Blog</a></td>
+                    <td><a href="log.html">Log</a></td>
+                    <td><a href="links.html">Cool Links</a></td>
+                </tr>
+            </table>
+        </nav>
+
+        <!-- WAP Navigation only shown on mobile -->
+        <div class="wap-nav mobile-only">
+            <div class="wap-header">NodeMixaholic WAP</div>
+            <div class="wap-menu">
+                <p><a href="log.html">Log</a></p>
+                <p><a href="blog.html">Blog</a></p>
+            </div>
+        </div>
+
+        <main>
+            <section class="about-me">
+                <h2>About Me</h2>
+                
+                <div class="profile desktop-only">
+                    <img src="images/avatar.gif" alt="My Avatar" class="avatar">
+                    <div class="profile-details">
+                        <p><b>Name:</b> NodeMixaholic</p>
+                        <p><b>Location:</b> Cyberspace</p>
+                        <p><b>Occupation:</b> Tech Enthusiast</p>
+                        <p><b>Hobbies:</b> Coding, Linux, and Technology</p>
+                    </div>
+                </div>
+                
+                <div class="bio">
+                    <h3>My Bio</h3>
+                    <p>Welcome to my personal page! I am a tech enthusiast who loves working with code and exploring new technologies. I've been passionate about computers since I first encountered them.</p>
+                    
+                    <p>I spend most of my time working on various programming projects, exploring Linux, and sharing my knowledge with others online.</p>
+                    
+                    <h3>My Skills</h3>
+                    <ul>
+                        <li>Programming</li>
+                        <li>Web Development</li>
+                        <li>Linux Administration</li>
+                        <li>Problem Solving</li>
+                    </ul>
+                </div>
+                
+                <div class="guestbook desktop-only">
+                    <h3>Sign My Guestbook!</h3>
+                    <p>Please <a href="guestbook.html">sign my guestbook</a> before you leave!</p>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p class="desktop-only">© 2001-<script>document.write(new Date().getFullYear());</script> NodeMixaholic. All rights reserved.</p>
+            <p class="desktop-only">Best viewed with Netscape Navigator or Internet Explorer</p>
+            <div class="browser-icons desktop-only">
+                <img src="images/netscape.gif" alt="Netscape">
+                <img src="images/ie.gif" alt="Internet Explorer">
+            </div>
+            <p class="desktop-only"><a href="index.html">Return to Home</a></p>
+            <p class="mobile-only">WAP Site</p>
+        </footer>
+    </div>
+</body>
+</html> 

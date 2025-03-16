@@ -1,0 +1,290 @@
+/* General Styles */
+body {
+    font-family: "Comic Sans MS", "Arial", sans-serif;
+    background-color: #ccccff;
+    color: #000080;
+    margin: 0;
+    padding: 0;
+    background-image: url('../images/stars.gif');
+}
+
+.container {
+    width: 760px;
+    margin: 0 auto;
+    border: 2px solid #9999cc;
+    background-color: #ffffff;
+    padding: 10px;
+    box-shadow: 5px 5px 10px #666666;
+}
+
+/* Header Styles */
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.site-title {
+    font-size: 28px;
+    color: #ff0000;
+    text-shadow: 2px 2px 2px #ffff00;
+    margin-bottom: 10px;
+}
+
+.construction {
+    margin: 10px 0;
+}
+
+marquee {
+    background-color: #ffff99;
+    border: 1px solid #ff9900;
+    padding: 3px;
+    margin: 10px 0;
+    color: #cc0000;
+    font-weight: bold;
+}
+
+.counter {
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+#visitor-count {
+    color: #ff0000;
+    font-size: 18px;
+}
+
+/* Navigation Styles */
+.menu-table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #9999cc;
+    background-color: #eeeeff;
+}
+
+.menu-table td {
+    padding: 5px;
+    text-align: center;
+    border: 1px solid #9999cc;
+}
+
+.menu-table a {
+    color: #0000ff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.menu-table a:hover {
+    text-decoration: underline;
+    color: #ff00ff;
+}
+
+/* Main Content Styles */
+main {
+    margin: 20px 0;
+    line-height: 1.4;
+}
+
+h2 {
+    color: #006600;
+    border-bottom: 1px dotted #006600;
+    padding-bottom: 5px;
+}
+
+h3 {
+    color: #660066;
+}
+
+.intro {
+    margin-bottom: 20px;
+}
+
+.updates ul {
+    list-style-image: url('../images/bullet.gif');
+}
+
+/* Update Box Styles */
+.update-box {
+    border: 1px dashed #9999cc;
+    background-color: #f0f0ff;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.update-box p {
+    margin: 5px 0;
+}
+
+.update-box b {
+    color: #990000;
+}
+
+/* Links Page Styles */
+.links-category {
+    margin-bottom: 25px;
+}
+
+.links-table {
+    width: 95%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    border: 2px solid #9999cc;
+}
+
+.links-table th {
+    background-color: #ccccff;
+    color: #000080;
+    font-size: 14px;
+    padding: 5px;
+    text-align: center;
+    border: 1px solid #9999cc;
+}
+
+.links-table td {
+    padding: 5px;
+    border: 1px solid #ddddff;
+}
+
+.links-table td:first-child {
+    width: 30px;
+    text-align: center;
+    background-color: #eeeeff;
+}
+
+.links-table td img {
+    width: 16px;
+    height: 16px;
+}
+
+.links-table tr:nth-child(even) {
+    background-color: #f8f8ff;
+}
+
+.links-table tr:hover {
+    background-color: #ffffcc;
+}
+
+/* Webring Styles */
+.webrings {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.webring-table {
+    width: 80%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    border: 1px solid #9999cc;
+    background-color: #eeeeff;
+}
+
+.webring-table td {
+    padding: 5px;
+    border: 1px solid #9999cc;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 12px;
+    border-top: 1px solid #9999cc;
+    padding-top: 10px;
+}
+
+.browser-icons {
+    margin: 10px 0;
+}
+
+.browser-icons img {
+    height: 30px;
+    margin: 0 5px;
+}
+
+/* Links */
+a {
+    color: #0000ff;
+    text-decoration: underline;
+}
+
+a:hover {
+    color: #ff0000;
+}
+
+a:visited {
+    color: #800080;
+}
+
+/* Blink effect - classic 2001 style */
+.blink {
+    animation: blinker 1s step-start infinite;
+}
+
+@keyframes blinker {
+    50% {
+        opacity: 0;
+    }
+}
+
+/* Mobile WAP Styles */
+@media (max-width: 768px) {
+    .desktop-only {
+        display: none;
+    }
+    
+    body {
+        background-image: none;
+        background-color: #ffffff;
+        font-family: monospace;
+    }
+    
+    .container {
+        width: 100%;
+        border: none;
+        padding: 5px;
+        box-shadow: none;
+    }
+    
+    .wap-header {
+        background-color: #000000;
+        color: #ffffff;
+        padding: 5px;
+        text-align: center;
+        font-size: 14px;
+    }
+    
+    .wap-menu {
+        border: 1px solid #000000;
+        margin-top: 5px;
+    }
+    
+    .wap-menu p {
+        margin: 0;
+        padding: 5px;
+        border-bottom: 1px solid #cccccc;
+    }
+    
+    main {
+        margin: 10px 0;
+    }
+    
+    a {
+        color: #000000;
+        text-decoration: underline;
+    }
+}
+
+/* Desktop/Mobile Display Controls */
+@media (min-width: 769px) {
+    .mobile-only {
+        display: none;
+    }
+}
+
+/* Old Browser Alert */
+.browser-warning {
+    background-color: #ffff99;
+    border: 1px solid #ff0000;
+    padding: 10px;
+    margin-bottom: 15px;
+    text-align: center;
+} 

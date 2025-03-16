@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NodeMixaholic's Homepage</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="site-title">Welcome to NodeMixaholic's Homepage!</h1>
+            <div class="construction">
+                <img src="images/construction.gif" alt="Under Construction" class="desktop-only">
+                <span>Site last updated: <script>document.write(new Date().toLocaleDateString());</script></span>
+            </div>
+            <marquee class="desktop-only" scrollamount="3" behavior="scroll" direction="left">Welcome to my personal homepage! Thanks for stopping by!</marquee>
+            <div class="counter desktop-only">
+                <span>You are visitor #</span>
+                <span id="visitor-count">42069</span>
+            </div>
+        </header>
+
+        <nav class="desktop-only">
+            <table class="menu-table">
+                <tr>
+                    <td><a href="index.html">Home</a></td>
+                    <td><a href="about.html">About Me</a></td>
+                    <td><a href="blog.html">Archived Blog</a></td>
+                    <td><a href="log.html">Log</a></td>
+                    <td><a href="links.html">Cool Links</a></td>
+                </tr>
+            </table>
+        </nav>
+
+        <!-- WAP Navigation only shown on mobile -->
+        <div class="wap-nav mobile-only">
+            <div class="wap-header">NodeMixaholic WAP</div>
+            <div class="wap-menu">
+                <p><a href="log.html">Log</a></p>
+                <p><a href="blog.html">Blog</a></p>
+            </div>
+        </div>
+
+        <main>
+            <section class="intro desktop-only">
+                <h2>NodeMixaholic - Tech, Linux, and Coding!</h2>
+                <p>Hello and welcome to my personal homepage! This site is best viewed with Netscape Navigator 4.0 or Internet Explorer 5.0 at 800x600 resolution.</p>
+                <hr>
+            </section>
+
+            <section class="content">
+                <h2 class="desktop-only">About Me</h2>
+                <p>I'm NodeMixaholic (also known as Sam), and I'm passionate about coding, Linux, and all things tech! This is my personal space on the World Wide Web where I share my projects and thoughts.</p>
+                
+                <div class="updates">
+                    <h3>My Projects:</h3>
+                    <ul>
+                        <li>Python programming experiments</li>
+                        <li>Linux customization and tools</li>
+                        <li>Web development adventures</li>
+                        <li>Retro computing projects</li>
+                    </ul>
+                </div>
+
+                <div class="desktop-only">
+                    <h3>Recent Updates: <span class="blink">NEW!</span></h3>
+                    <div class="update-box">
+                        <p><b>Latest Blog Post:</b> Check out my <a href="blog.html">blog</a> for my latest thoughts and experiences!</p>
+                        <p><b>Project Updates:</b> View my <a href="log.html">log</a> to see what I've been working on lately.</p>
+                    </div>
+                </div>
+
+                <div class="desktop-only">
+                    <h3>Connect With Me:</h3>
+                    <p>Feel free to reach out if you have similar interests or just want to chat about tech!</p>
+                    <p><img src="images/construction.gif" width="15" height="15"> My email: <a href="mailto:webmaster@nodemixaholic.com">webmaster@nodemixaholic.com</a></p>
+                </div>
+            </section>
+        </main>
+
+        <div class="webrings desktop-only">
+            <h3>Proud Member Of:</h3>
+            <table class="webring-table">
+                <tr>
+                    <td><a href="#">&lt;&lt; Prev</a></td>
+                    <td>Tech Enthusiasts Webring</td>
+                    <td><a href="#">Next &gt;&gt;</a></td>
+                </tr>
+            </table>
+        </div>
+
+        <footer>
+            <p class="desktop-only">© 2001-<script>document.write(new Date().getFullYear());</script> NodeMixaholic. All rights reserved.</p>
+            <p class="desktop-only">Best viewed with Netscape Navigator or Internet Explorer</p>
+            <div class="browser-icons desktop-only">
+                <img src="images/netscape.gif" alt="Netscape">
+                <img src="images/ie.gif" alt="Internet Explorer">
+            </div>
+            <p class="desktop-only">This page is <span id="page-size">12</span>K. Last updated: <script>document.write(new Date().toLocaleDateString());</script></p>
+            <p class="mobile-only">WAP Site</p>
+        </footer>
+    </div>
+</body>
+</html> 
