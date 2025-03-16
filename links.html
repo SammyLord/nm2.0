@@ -7,38 +7,35 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="js/main.js" defer></script>
     <script src="js/music.js" defer></script>
+    <style>
+        /* Style for the iframes */
+        .header-frame {
+            width: 100%;
+            height: 200px;
+            border: none;
+            overflow: hidden;
+        }
+        .wap-header-frame {
+            width: 100%;
+            height: 100px;
+            border: none;
+            overflow: hidden;
+        }
+        .footer-frame {
+            width: 100%;
+            height: 150px;
+            border: none;
+            overflow: hidden;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
-        <header>
-            <h1 class="site-title">NodeMixaholic's Cool Links</h1>
-            <div class="construction">
-                <img src="images/construction.gif" alt="Under Construction" class="desktop-only">
-                <span>Site last updated: <script>document.write(new Date().toLocaleDateString());</script></span>
-            </div>
-            <marquee class="desktop-only" scrollamount="3" behavior="scroll" direction="left">Check out these awesome links I've collected! Some old, some new, all cool!</marquee>
-        </header>
+        <!-- Desktop Header iframe -->
+        <iframe src="header.html" class="header-frame desktop-only" frameborder="0" scrolling="no"></iframe>
 
-        <nav class="desktop-only">
-            <table class="menu-table">
-                <tr>
-                    <td><a href="index.html">Home</a></td>
-                    <td><a href="about.html">About Me</a></td>
-                    <td><a href="blog/">Archived Blog</a></td>
-                    <td><a href="log/">Log</a></td>
-                    <td><a href="links.html">Cool Links</a></td>
-                </tr>
-            </table>
-        </nav>
-
-        <!-- WAP Navigation only shown on mobile -->
-        <div class="wap-nav mobile-only">
-            <div class="wap-header">NodeMixaholic WAP</div>
-            <div class="wap-menu">
-                <p><a href="log/">Log</a></p>
-                <p><a href="blog/">Blog</a></p>
-            </div>
-        </div>
+        <!-- WAP Header iframe -->
+        <iframe src="wap-header.html" class="wap-header-frame mobile-only" frameborder="0" scrolling="no"></iframe>
 
         <main>
             <section class="desktop-only">
@@ -150,17 +147,8 @@
             </table>
         </div>
 
-        <footer>
-            <p class="desktop-only">© 2001-<script>document.write(new Date().getFullYear());</script> Sammy Lord. All rights reserved.</p>
-            <p class="desktop-only">Best viewed with Netscape Navigator or Internet Explorer</p>
-            <div class="browser-icons desktop-only">
-                <img src="images/netscape.gif" alt="Netscape">
-                <img src="images/ie.gif" alt="Internet Explorer">
-            </div>
-            <p class="desktop-only">This page is <span id="page-size">12</span>K. Last updated: <script>document.write(new Date().toLocaleDateString());</script></p>
-            <p class="desktop-only"><a href="index.html">Return to Home</a></p>
-            <p class="mobile-only">WAP Site</p>
-        </footer>
+        <!-- Footer iframe -->
+        <iframe src="footer.html" class="footer-frame" frameborder="0" scrolling="no"></iframe>
     </div>
     
     <!-- Music is now handled entirely by JavaScript -->

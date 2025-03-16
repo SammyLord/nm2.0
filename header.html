@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        .header-container {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="header-container">
+        <header>
+            <h1 class="site-title" id="dynamic-title">Welcome to NodeMixaholic's Homepage!</h1>
+            <div class="construction">
+                <img src="images/construction.gif" alt="Under Construction">
+                <span>Site last updated: <script>document.write(new Date().toLocaleDateString());</script></span>
+            </div>
+            <marquee scrollamount="3" behavior="scroll" direction="left">Welcome to my personal homepage! Thanks for stopping by!</marquee>
+            <div class="counter">
+                <span>You are visitor #</span>
+                <span id="visitor-count">42069</span>
+            </div>
+        </header>
+
+        <nav>
+            <table class="menu-table">
+                <tr>
+                    <td><a href="index.html" target="_parent">Home</a></td>
+                    <td><a href="about.html" target="_parent">About Me</a></td>
+                    <td><a href="blog/" target="_parent">Archived Blog</a></td>
+                    <td><a href="log/" target="_parent">Log</a></td>
+                    <td><a href="links.html" target="_parent">Cool Links</a></td>
+                </tr>
+            </table>
+        </nav>
+    </div>
+
+    <script>
+        // Detect which page is calling this header and update title accordingly
+        function updateTitle() {
+            const parentUrl = parent.window.location.href;
+            const titleElement = document.getElementById('dynamic-title');
+            
+            if (parentUrl.includes('about.html')) {
+                titleElement.textContent = "About NodeMixaholic";
+            } else if (parentUrl.includes('links.html')) {
+                titleElement.textContent = "NodeMixaholic's Cool Links";
+            } else {
+                titleElement.textContent = "Welcome to NodeMixaholic's Homepage!";
+            }
+        }
+        
+        // Run after page loads
+        window.onload = updateTitle;
+    </script>
+</body>
+</html> 
