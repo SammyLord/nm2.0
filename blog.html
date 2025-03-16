@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - NodeMixaholic's Homepage</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js" defer></script>
+    <script src="js/music.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="site-title">NodeMixaholic's Blog</h1>
+            <div class="construction">
+                <img src="images/construction.gif" alt="Under Construction" class="desktop-only">
+                <span>Site last updated: <script>document.write(new Date().toLocaleDateString());</script></span>
+            </div>
+        </header>
+
+        <nav class="desktop-only">
+            <table class="menu-table">
+                <tr>
+                    <td><a href="index.html">Home</a></td>
+                    <td><a href="about.html">About Me</a></td>
+                    <td><a href="blog.html">Blog</a></td>
+                    <td><a href="log.html">Log</a></td>
+                    <td><a href="links.html">Cool Links</a></td>
+                </tr>
+            </table>
+        </nav>
+
+        <!-- WAP Navigation only shown on mobile -->
+        <div class="wap-nav mobile-only">
+            <div class="wap-header">NodeMixaholic WAP</div>
+            <div class="wap-menu">
+                <p><a href="log.html">Log</a></p>
+                <p><a href="blog.html">Blog</a></p>
+            </div>
+        </div>
+
+        <main>
+            <section class="blog-posts">
+                <h2>My Blog Posts</h2>
+                
+                <article class="blog-post">
+                    <h3>The Future of Web Development</h3>
+                    <div class="post-meta">Posted on: January 15, 2001</div>
+                    <div class="post-content">
+                        <p>As we enter the new millennium, web development is evolving at a rapid pace. DHTML and JavaScript are becoming more powerful, and broadband connections are allowing for more interactive websites.</p>
+                        <p>I believe that in the future, we'll see more dynamic websites with animated content and interactive features. Maybe someday we'll even have websites that can adapt to different screen sizes!</p>
+                        <p><a href="blog-post1.html">Read more...</a></p>
+                    </div>
+                </article>
+                
+                <hr class="post-divider">
+                
+                <article class="blog-post">
+                    <h3>My Linux Journey</h3>
+                    <div class="post-meta">Posted on: December 5, 2000</div>
+                    <div class="post-content">
+                        <p>I recently installed Red Hat Linux 7.0 on my computer, and I'm enjoying the experience of learning a new operating system. The command line takes some getting used to, but I'm finding it quite powerful.</p>
+                        <p>One of the things I love about Linux is the community around it. There are so many helpful people on forums and IRC channels!</p>
+                        <p><a href="blog-post2.html">Read more...</a></p>
+                    </div>
+                </article>
+                
+                <hr class="post-divider">
+                
+                <article class="blog-post">
+                    <h3>Building My First Website</h3>
+                    <div class="post-meta">Posted on: November 10, 2000</div>
+                    <div class="post-content">
+                        <p>Today I'm excited to launch my personal homepage on the World Wide Web! I've learned HTML by reading books and looking at the source code of other websites.</p>
+                        <p>It took me a while to figure out how to use tables for layout, but I'm happy with how it turned out. I'm hosting this site on GeoCities, which gives me 15MB of free space!</p>
+                        <p><a href="blog-post3.html">Read more...</a></p>
+                    </div>
+                </article>
+            </section>
+            
+            <div class="page-navigation desktop-only">
+                <p>
+                    <a href="#">&lt;&lt; Previous Page</a> | 
+                    <a href="#">Next Page &gt;&gt;</a>
+                </p>
+            </div>
+        </main>
+
+        <footer>
+            <p class="desktop-only">© 2001-<script>document.write(new Date().getFullYear());</script> NodeMixaholic. All rights reserved.</p>
+            <p class="desktop-only">Best viewed with Netscape Navigator or Internet Explorer</p>
+            <div class="browser-icons desktop-only">
+                <img src="images/netscape.gif" alt="Netscape">
+                <img src="images/ie.gif" alt="Internet Explorer">
+            </div>
+            <p class="desktop-only"><a href="index.html">Return to Home</a></p>
+            <p class="mobile-only">WAP Site</p>
+        </footer>
+    </div>
+    
+    <!-- Music is now handled entirely by JavaScript -->
+</body>
+</html> 
