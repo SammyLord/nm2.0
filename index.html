@@ -5,47 +5,68 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NodeMixaholic's Homepage</title>
     <link rel="stylesheet" href="css/style.css">
+    <!-- Mobile redirect script - must run before other scripts -->
+    <script src="js/mobileRedirect.js"></script>
     <script src="js/main.js" defer></script>
     <script src="js/music.js" defer></script>
     <style>
-        /* Style for the iframes */
-        .header-frame {
-            width: 100%;
-            height: 200px;
-            border: none;
-            overflow: hidden;
+        /* Basic styling */
+        body {
+            font-family: "Comic Sans MS", "Arial", sans-serif;
+            background-color: #ccccff;
+            color: #000080;
+            margin: 0;
+            padding: 0;
+            background-image: url('images/stars.gif');
         }
-        .wap-header-frame {
-            width: 100%;
-            height: 100px;
-            border: none;
-            overflow: hidden;
-        }
-        .footer-frame {
-            width: 100%;
-            height: 150px;
-            border: none;
-            overflow: hidden;
+        
+        .container {
+            width: 760px;
+            margin: 0 auto;
+            border: 2px solid #9999cc;
+            background-color: #ffffff;
+            padding: 10px;
+            box-shadow: 5px 5px 10px #666666;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <!-- Desktop Header iframe -->
-        <iframe src="header.html" class="header-frame desktop-only" frameborder="0" scrolling="no"></iframe>
+        <!-- Header -->
+        <header>
+            <h1 class="site-title">Welcome to NodeMixaholic's Homepage!</h1>
+            <div class="construction">
+                <img src="images/construction.gif" alt="Under Construction">
+                <span>Site last updated: <script>document.write(new Date().toLocaleDateString());</script></span>
+            </div>
+            <marquee scrollamount="3" behavior="scroll" direction="left">Welcome to my personal homepage! Thanks for stopping by!</marquee>
+            <div class="counter">
+                <span>You are visitor #</span>
+                <span id="visitor-count">42069</span>
+            </div>
+        </header>
 
-        <!-- WAP Header iframe -->
-        <iframe src="wap-header.html" class="wap-header-frame mobile-only" frameborder="0" scrolling="no"></iframe>
+        <nav>
+            <table class="menu-table">
+                <tr>
+                    <td><a href="index.html">Home</a></td>
+                    <td><a href="about.html">About Me</a></td>
+                    <td><a href="blog/">Archived Blog</a></td>
+                    <td><a href="log/">Log</a></td>
+                    <td><a href="links.html">Cool Links</a></td>
+                </tr>
+            </table>
+        </nav>
 
         <main>
-            <section class="intro desktop-only">
+            <section class="intro">
                 <h2>Sammy Lord - Tech, Linux, and Coding!</h2>
                 <p>Hello and welcome to my personal homepage! This site is best viewed with Netscape Navigator 4.0 or Internet Explorer 5.0 at 800x600 resolution.</p>
                 <hr>
             </section>
 
             <section class="content">
-                <h2 class="desktop-only">About Me</h2>
+                <h2>About Me</h2>
                 <p>I'm NodeMixaholic (also known as Sparksammy, Sammy, or Sam), and I'm passionate about coding, Linux, and all things tech! This is my personal space on the World Wide Web where I share my projects and thoughts.</p>
                 
                 <div class="updates">
@@ -58,7 +79,7 @@
                     </ul>
                 </div>
 
-                <div class="desktop-only">
+                <div>
                     <h3>Recent Updates: <span class="blink">NEW!</span></h3>
                     <div class="update-box">
                         <p><b>Archived Blog Posts:</b> Check out my <a href="blog.html">blog</a> for my older thoughts and experiences!</p>
@@ -66,7 +87,7 @@
                     </div>
                 </div>
 
-                <div class="desktop-only">
+                <div>
                     <h3>Connect With Me:</h3>
                     <p>Feel free to reach out if you have similar interests or just want to chat about tech!</p>
                     <p><img src="images/construction.gif" width="15" height="15"> My email: <a href="mailto:webmaster@sllord.info">webmaster@sllord.info</a></p>
@@ -74,7 +95,7 @@
             </section>
         </main>
 
-        <div class="webrings desktop-only">
+        <div class="webrings">
             <h3>Proud Member Of:</h3>
             <table class="webring-table">
                 <tr>
@@ -85,10 +106,19 @@
             </table>
         </div>
 
-        <!-- Footer iframe -->
-        <iframe src="footer.html" class="footer-frame" frameborder="0" scrolling="no"></iframe>
+        <!-- Footer -->
+        <footer>
+            <p>© 2001-<script>document.write(new Date().getFullYear());</script> Sammy Lord. All rights reserved.</p>
+            <p>Best viewed with Netscape Navigator or Internet Explorer</p>
+            <div class="browser-icons">
+                <img src="images/netscape.gif" alt="Netscape">
+                <img src="images/ie.gif" alt="Internet Explorer">
+            </div>
+            <p>This page is <span id="page-size">12</span>K. Last updated: <script>document.write(new Date().toLocaleDateString());</script></p>
+            <p><a href="index.html">Return to Home</a></p>
+        </footer>
     </div>
     
-    <!-- Music is now handled entirely by JavaScript -->
+    <!-- Music is handled entirely by JavaScript -->
 </body>
 </html> 

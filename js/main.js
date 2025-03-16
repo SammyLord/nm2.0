@@ -2,7 +2,7 @@
  * Early 2000s style JavaScript functionality
  */
 
-// Random visitor counter (simulated)
+// Document ready function
 document.addEventListener('DOMContentLoaded', function() {
     // Update visitor counter with random number if element exists
     const visitorCount = document.getElementById('visitor-count');
@@ -20,7 +20,52 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Calculate fake page size
     updatePageSize();
+    
+    // Fix links in iframes to work with parent window
+    fixIframeLinks();
+    
+    // Apply target="_parent" to all links in the page
+    fixAllLinks();
 });
+
+/**
+ * Fix all links in the page to ensure they work properly
+ */
+function fixAllLinks() {
+    // Add target="_parent" to all links in the main document
+    const allLinks = document.querySelectorAll('a');
+    allLinks.forEach(link => {
+        if (!link.getAttribute('target') && link.href && !link.href.startsWith('javascript:')) {
+            link.setAttribute('target', '_parent');
+        }
+    });
+}
+
+/**
+ * Fix links in iframes to open in parent window
+ */
+function fixIframeLinks() {
+    // Wait for iframes to load
+    const iframes = document.querySelectorAll('iframe');
+    iframes.forEach(iframe => {
+        iframe.onload = function() {
+            try {
+                // Make sure the iframe content is fully loaded
+                if (this.contentDocument && this.contentDocument.body) {
+                    // Fix links in the iframe to target the parent window
+                    const iframeLinks = this.contentDocument.querySelectorAll('a');
+                    iframeLinks.forEach(link => {
+                        if (!link.getAttribute('target')) {
+                            link.setAttribute('target', '_parent');
+                        }
+                    });
+                }
+            } catch (e) {
+                console.error('Error fixing iframe links:', e);
+            }
+        };
+    });
+}
 
 /**
  * Simulates checking for "modern" browsers (by 2001 standards)

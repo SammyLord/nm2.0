@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/mobileCheck.js" defer></script>
     <style>
         body {
             margin: 0;
@@ -12,17 +13,32 @@
         .footer-container {
             width: 100%;
         }
+        /* Show desktop footer content by default */
         .desktop-footer {
-            width: 100%;
+            display: block;
         }
+        /* Hide mobile footer content by default */
         .mobile-footer {
-            width: 100%;
+            display: none;
+        }
+        /* Using classes that will be applied by JavaScript */
+        .mobile-device .desktop-footer {
+            display: none !important;
+        }
+        .mobile-device .mobile-footer {
+            display: block !important;
+        }
+        .desktop-device .desktop-footer {
+            display: block !important;
+        }
+        .desktop-device .mobile-footer {
+            display: none !important;
         }
     </style>
 </head>
 <body>
     <div class="footer-container">
-        <div class="desktop-footer desktop-only">
+        <div class="desktop-footer">
             <p>© 2001-<script>document.write(new Date().getFullYear());</script> Sammy Lord. All rights reserved.</p>
             <p>Best viewed with Netscape Navigator or Internet Explorer</p>
             <div class="browser-icons">
@@ -32,10 +48,7 @@
             <p>This page is <span id="page-size">12</span>K. Last updated: <script>document.write(new Date().toLocaleDateString());</script></p>
             <p><a href="index.html" target="_parent">Return to Home</a></p>
         </div>
-        
-        <div class="mobile-footer mobile-only">
-            <p>WAP Site</p>
-        </div>
+    
     </div>
 </body>
 </html> 
