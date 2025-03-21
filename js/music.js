@@ -15,6 +15,12 @@ function isWAPVersion() {
     return window.innerWidth <= 768 || document.querySelector('.wap-header') !== null;
 }
 
+// Helper function to check if today is April 1st
+function isAprilFoolsDay() {
+    const today = new Date();
+    return today.getMonth() === 3 && today.getDate() === 1; // Month is 0-indexed, so April is 3
+}
+
 // Function to play background music once per page load
 function playBackgroundMusic() {
     // Only play if it hasn't played during this page visit AND not in WAP mode
@@ -27,7 +33,12 @@ function playBackgroundMusic() {
             audioElement = document.createElement('audio');
             audioElement.id = 'background-music';
             
-            audioElement.src = 'music.mp3';
+            // Check if it's April 1st and set appropriate music file
+            if (isAprilFoolsDay()) {
+                audioElement.src = 'fullhampster.mp3';
+            } else {
+                audioElement.src = 'music.mp3';
+            }
             
             document.body.appendChild(audioElement);
         }
