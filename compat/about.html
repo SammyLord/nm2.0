@@ -1,56 +1,29 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
 <HTML>
 <HEAD>
-    <TITLE>About NodeMixaholic</TITLE>
-    <META NAME="description" CONTENT="About Sammy Lord - Tech enthusiast, programmer, and Linux lover">
-    <META NAME="keywords" CONTENT="Sammy Lord, NodeMixaholic, tech, coding, Linux, about">
+    <TITLE>About Me - NodeMixaholic's Homepage</TITLE>
+    <META NAME="description" CONTENT="Learn more about Sammy Lord (NodeMixaholic) - Tech enthusiast, coder, and Linux lover">
+    <META NAME="keywords" CONTENT="Sammy Lord, NodeMixaholic, about, tech, coding, Linux">
     <LINK REL="icon" HREF="../favicon.ico" TYPE="image/x-icon">
-    <STYLE>
-        BODY {
-            font-family: "Comic Sans MS", Arial, sans-serif;
-            background-color: #ccccff;
-            color: #000080;
-            margin: 0;
-            padding: 0;
-            background-image: url('../images/stars.gif');
-        }
-        .container {
-            width: 760px;
-            margin: 0 auto;
-            border: 2px solid #9999cc;
-            background-color: #ffffff;
-            padding: 10px;
-        }
-        .site-title {
-            color: #000080;
-            text-align: center;
-        }
-        .menu-table {
-            width: 100%;
-            border: 1px solid #9999cc;
-        }
-        .menu-table TD {
-            text-align: center;
-            padding: 5px;
-        }
-        .menu-table A {
-            color: #000080;
-            text-decoration: none;
-        }
-        .menu-table A:hover {
-            text-decoration: underline;
-        }
-    </STYLE>
+    <LINK REL="stylesheet" HREF="style.css" TYPE="text/css">
 </HEAD>
 <BODY>
     <BGSOUND SRC="../music.mp3" LOOP="-1">
     <DIV CLASS="container">
-        <H1 CLASS="site-title">About NodeMixaholic</H1>
+        <H1 CLASS="site-title">About Me</H1>
         
-        <DIV ALIGN="center">
+        <DIV CLASS="construction">
             <IMG SRC="../images/construction.gif" ALT="Under Construction">
             <BR>
             <FONT SIZE="-1">Site last updated: <SCRIPT>document.write(new Date().toLocaleDateString());</SCRIPT></FONT>
+        </DIV>
+
+        <MARQUEE SCROLLAMOUNT="3" BEHAVIOR="SCROLL" DIRECTION="LEFT">
+            Welcome to my personal homepage! Thanks for stopping by!
+        </MARQUEE>
+
+        <DIV CLASS="counter">
+            <FONT SIZE="-1">You are visitor #<SPAN ID="visitor-count">42069</SPAN></FONT>
         </DIV>
 
         <TABLE CLASS="menu-table">
@@ -66,33 +39,37 @@
         <HR>
 
         <H2>Who Am I?</H2>
-        <P>I'm Sammy Lord, also known as NodeMixaholic or Sparksammy. I'm a tech enthusiast who loves coding, Linux, and all things technology. This is my personal space on the World Wide Web where I share my projects and thoughts.</P>
+        <P>I'm Sammy Lord, also known as NodeMixaholic or Sparksammy in various online communities. I'm a tech enthusiast who loves exploring the intersection of modern technology and retro computing.</P>
 
         <H2>My Interests</H2>
         <UL>
-            <LI>Software Development via Vibes</LI>
-            <LI>Operating Systems and Linux</LI>
+            <LI>Programming and Software Development</LI>
+            <LI>Operating Systems (especially Linux)</LI>
             <LI>Web Development</LI>
-            <LI>Tech Projects</LI>
+            <LI>Retro Computing</LI>
+            <LI>Tech History</LI>
         </UL>
 
-        <H2>My Projects</H2>
-        <P>I work on various projects including:</P>
+        <H2>My Journey</H2>
+        <P>I started my tech journey at a young age, fascinated by how computers worked. Over the years, I've developed a deep appreciation for both modern technology and the classic computing era that shaped today's digital world.</P>
+
+        <H2>Current Projects</H2>
+        <DIV CLASS="update-box">
+            <P><B>Web Development:</B> Creating retro-styled websites that work on both modern and classic browsers</P>
+            <P><B>Linux Customization:</B> Building custom Linux distributions and desktop environments</P>
+            <P><B>Programming:</B> Working on various programming projects in different languages</P>
+        </DIV>
+
+        <H2>Connect With Me</H2>
+        <P>I'm always excited to connect with fellow tech enthusiasts! Feel free to reach out:</P>
         <UL>
-            <LI>Vibe coding experiments and AI tools</LI>
-            <LI>Operating system customization</LI>
-            <LI>Web development and design</LI>
-            <LI>Modern computing projects with a retro twist</LI>
+            <LI>XMPP: sam@xmpp.nodemixaholic.com</LI>
+            <LI>Email: sam@nodemixaholic.com</LI>
         </UL>
 
-        <H2>Contact</H2>
-        <P>Feel free to reach out if you share similar interests! Aged 18+ only.</P>
-        <P>XMPP: sam@xmpp.nodemixaholic.com</P>
         <HR>
 
         <DIV ALIGN="center">
-            <P><I>"Find a balance between freedom, comfort, and flexibility; for there is not such thing as full freedom."</I> <FONT SIZE="-1">--me</FONT></P>
-            <P><I>"The AI is just a canvas. It is useless without the paints that are the prompts."</I> <FONT SIZE="-1">--also me</FONT></P>
             <P>© 2001-<SCRIPT>document.write(new Date().getFullYear());</SCRIPT> Sammy Lord. All rights reserved.</P>
             <P>Best viewed with Netscape Navigator or Internet Explorer</P>
             <IMG SRC="../images/netscape.gif" ALT="Netscape">
@@ -103,6 +80,10 @@
     </DIV>
 
     <SCRIPT LANGUAGE="JavaScript">
+        // Simple visitor counter
+        var count = 42069;
+        document.getElementById('visitor-count').innerHTML = count;
+        
         // Page size calculation (simplified)
         document.getElementById('page-size').innerHTML = '8';
     </SCRIPT>

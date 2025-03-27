@@ -1,0 +1,194 @@
+/* Oldschool Styles - Compatible with Netscape 4.0 and IE 5.0 */
+body {
+    font-family: "Comic Sans MS", Arial, sans-serif;
+    background-color: #ccccff;
+    color: #000080;
+    margin: 0;
+    padding: 0;
+    background-image: url('../images/stars.gif');
+}
+
+.container {
+    width: 760px;
+    margin: 0 auto;
+    border: 2px solid #9999cc;
+    background-color: #ffffff;
+    padding: 10px;
+}
+
+.site-title {
+    font-size: 28px;
+    color: #ff0000;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.construction {
+    margin: 10px 0;
+    text-align: center;
+}
+
+marquee {
+    background-color: #ffff99;
+    border: 1px solid #ff9900;
+    padding: 3px;
+    margin: 10px 0;
+    color: #cc0000;
+    font-weight: bold;
+}
+
+.counter {
+    font-weight: bold;
+    margin: 10px 0;
+    text-align: center;
+}
+
+#visitor-count {
+    color: #ff0000;
+    font-size: 18px;
+}
+
+.menu-table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #9999cc;
+    background-color: #eeeeff;
+}
+
+.menu-table td {
+    padding: 5px;
+    text-align: center;
+    border: 1px solid #9999cc;
+}
+
+.menu-table a {
+    color: #0000ff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.menu-table a:hover {
+    text-decoration: underline;
+    color: #ff00ff;
+}
+
+h2 {
+    color: #006600;
+    border-bottom: 1px dotted #006600;
+    padding-bottom: 5px;
+}
+
+h3 {
+    color: #660066;
+}
+
+.update-box {
+    border: 1px dashed #9999cc;
+    background-color: #f0f0ff;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.update-box p {
+    margin: 5px 0;
+}
+
+.update-box b {
+    color: #990000;
+}
+
+.links-table {
+    width: 95%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    border: 2px solid #9999cc;
+}
+
+.links-table th {
+    background-color: #ccccff;
+    color: #000080;
+    font-size: 14px;
+    padding: 5px;
+    text-align: center;
+    border: 1px solid #9999cc;
+}
+
+.links-table td {
+    padding: 5px;
+    border: 1px solid #ddddff;
+}
+
+.links-table td:first-child {
+    width: 30px;
+    text-align: center;
+    background-color: #eeeeff;
+}
+
+.links-table td img {
+    width: 16px;
+    height: 16px;
+}
+
+.links-table tr:nth-child(even) {
+    background-color: #f8f8ff;
+}
+
+.links-table tr:hover {
+    background-color: #ffffcc;
+}
+
+.webring-table {
+    width: 80%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    border: 1px solid #9999cc;
+    background-color: #eeeeff;
+}
+
+.webring-table td {
+    padding: 5px;
+    text-align: center;
+    border: 1px solid #9999cc;
+}
+
+a {
+    color: #0000ff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #ff00ff;
+}
+
+a:visited {
+    color: #800080;
+}
+
+.blink {
+    color: red;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* Browser-specific fixes */
+* html .container { /* IE5+ */
+    width: 760px;
+}
+
+* html .menu-table { /* IE5+ */
+    border-collapse: collapse;
+}
+
+* html .links-table { /* IE5+ */
+    border-collapse: collapse;
+}
+
+* html .webring-table { /* IE5+ */
+    border-collapse: collapse;
+} 

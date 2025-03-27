@@ -5,58 +5,14 @@
     <META NAME="description" CONTENT="Sammy Lord's personal homepage - Tech, Operating Systems, and Coding!">
     <META NAME="keywords" CONTENT="Sammy Lord, NodeMixaholic, tech, coding, Linux">
     <LINK REL="icon" HREF="../favicon.ico" TYPE="image/x-icon">
-    <STYLE>
-        BODY {
-            font-family: "Comic Sans MS", Arial, sans-serif;
-            background-color: #ccccff;
-            color: #000080;
-            margin: 0;
-            padding: 0;
-            background-image: url('../images/stars.gif');
-        }
-        .container {
-            width: 760px;
-            margin: 0 auto;
-            border: 2px solid #9999cc;
-            background-color: #ffffff;
-            padding: 10px;
-        }
-        .site-title {
-            color: #000080;
-            text-align: center;
-        }
-        .menu-table {
-            width: 100%;
-            border: 1px solid #9999cc;
-        }
-        .menu-table TD {
-            text-align: center;
-            padding: 5px;
-        }
-        .menu-table A {
-            color: #000080;
-            text-decoration: none;
-        }
-        .menu-table A:hover {
-            text-decoration: underline;
-        }
-        .blink {
-            color: red;
-            animation: blink 1s infinite;
-        }
-        @keyframes blink {
-            0% { opacity: 1; }
-            50% { opacity: 0; }
-            100% { opacity: 1; }
-        }
-    </STYLE>
+    <LINK REL="stylesheet" HREF="style.css" TYPE="text/css">
 </HEAD>
 <BODY>
     <BGSOUND SRC="../music.mp3" LOOP="-1">
     <DIV CLASS="container">
         <H1 CLASS="site-title">Welcome to NodeMixaholic's Homepage!</H1>
         
-        <DIV ALIGN="center">
+        <DIV CLASS="construction">
             <IMG SRC="../images/construction.gif" ALT="Under Construction">
             <BR>
             <FONT SIZE="-1">Site last updated: <SCRIPT>document.write(new Date().toLocaleDateString());</SCRIPT></FONT>
@@ -66,7 +22,7 @@
             Welcome to my personal homepage! Thanks for stopping by!
         </MARQUEE>
 
-        <DIV ALIGN="center">
+        <DIV CLASS="counter">
             <FONT SIZE="-1">You are visitor #<SPAN ID="visitor-count">42069</SPAN></FONT>
         </DIV>
 
@@ -97,7 +53,7 @@
         </UL>
 
         <H3>Recent Updates: <SPAN CLASS="blink">NEW!</SPAN></H3>
-        <DIV STYLE="border: 1px solid #9999cc; padding: 10px;">
+        <DIV CLASS="update-box">
             <P><B>Archived Blog Posts:</B> Check out my <A HREF="../log/blog-posts">blog</A> for my older thoughts and experiences!</P>
             <P><B>Project Updates:</B> View my <A HREF="../log/">log</A> to see what I've been working on lately and my thoughts on life.</P>
         </DIV>
@@ -108,11 +64,11 @@
         <HR>
 
         <H3>Proud Member Of:</H3>
-        <TABLE WIDTH="100%" BORDER="1">
+        <TABLE CLASS="webring-table">
             <TR>
-                <TD ALIGN="center"><A HREF="#">&lt;&lt; Prev</A></TD>
-                <TD ALIGN="center">Sam's Tech Enthusiasts Webring</TD>
-                <TD ALIGN="center"><A HREF="#">Next &gt;&gt;</A></TD>
+                <TD><A HREF="#">&lt;&lt; Prev</A></TD>
+                <TD>Sam's Tech Enthusiasts Webring</TD>
+                <TD><A HREF="#">Next &gt;&gt;</A></TD>
             </TR>
         </TABLE>
 
