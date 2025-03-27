@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.2//EN" "http://www.openmobilealliance.org/tech/DTD/xhtml-mobile12.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NodeMixaholic's Homepage</title>
+    <style type="text/css">
+        body { 
+            background-color: #ccccff;
+            color: #000080;
+            margin: 0;
+            padding: 5px;
+            font-family: sans-serif;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .menu {
+            background-color: #ffffff;
+            border: 1px solid #9999cc;
+            padding: 5px;
+            margin: 5px 0;
+        }
+        .menu a {
+            display: block;
+            padding: 5px;
+            color: #000080;
+            text-decoration: none;
+            border-bottom: 1px solid #9999cc;
+        }
+        .menu a:last-child {
+            border-bottom: none;
+        }
+        .content {
+            background-color: #ffffff;
+            border: 1px solid #9999cc;
+            padding: 10px;
+            margin: 5px 0;
+        }
+        .footer {
+            text-align: center;
+            font-size: small;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>NodeMixaholic's Homepage</h1>
+        <p>Welcome to my mobile-friendly site!</p>
+    </div>
+
+    <div class="menu">
+        <a href="index.wml">Home</a>
+        <a href="about.wml">About Me</a>
+        <a href="../log/blog-posts">Archived Blog</a>
+        <a href="../log/">Log</a>
+    </div>
+
+    <div class="content">
+        <h2>About Me</h2>
+        <p>I'm NodeMixaholic (also known as Sparksammy, Sammy, or Sam), and I'm passionate about coding, Linux, and all things tech!</p>
+
+        <h3>My Projects:</h3>
+        <ul>
+            <li>Programming experiments</li>
+            <li>OS customization</li>
+            <li>Web development</li>
+            <li>Modern computing projects</li>
+        </ul>
+
+        <h3>Recent Updates</h3>
+        <p><strong>Archived Blog Posts:</strong> Check out my <a href="../log/blog-posts">blog</a></p>
+        <p><strong>Project Updates:</strong> View my <a href="../log/">log</a></p>
+
+        <h3>Connect With Me</h3>
+        <p>Feel free to reach out if you have similar interests! Aged 18+ only.</p>
+        <p>XMPP: sam@xmpp.nodemixaholic.com</p>
+    </div>
+
+    <div class="footer">
+        <p>© 2001 Sammy Lord</p>
+        <p>Last updated: <script type="text/javascript">document.write(new Date().toLocaleDateString());</script></p>
+    </div>
+</body>
+</html> 

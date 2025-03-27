@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.2//EN" "http://www.openmobilealliance.org/tech/DTD/xhtml-mobile12.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About NodeMixaholic</title>
+    <style type="text/css">
+        body { 
+            background-color: #ccccff;
+            color: #000080;
+            margin: 0;
+            padding: 5px;
+            font-family: sans-serif;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .menu {
+            background-color: #ffffff;
+            border: 1px solid #9999cc;
+            padding: 5px;
+            margin: 5px 0;
+        }
+        .menu a {
+            display: block;
+            padding: 5px;
+            color: #000080;
+            text-decoration: none;
+            border-bottom: 1px solid #9999cc;
+        }
+        .menu a:last-child {
+            border-bottom: none;
+        }
+        .content {
+            background-color: #ffffff;
+            border: 1px solid #9999cc;
+            padding: 10px;
+            margin: 5px 0;
+        }
+        .footer {
+            text-align: center;
+            font-size: small;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>About NodeMixaholic</h1>
+    </div>
+
+    <div class="menu">
+        <a href="index.wml">Home</a>
+        <a href="about.wml">About Me</a>
+        <a href="../log/blog-posts">Archived Blog</a>
+        <a href="../log/">Log</a>
+    </div>
+
+    <div class="content">
+        <h2>Who Am I?</h2>
+        <p>I'm Sammy Lord, also known as NodeMixaholic or Sparksammy. I'm a tech enthusiast who loves coding, Linux, and all things technology.</p>
+
+        <h2>My Interests</h2>
+        <ul>
+            <li>Programming and Software Development</li>
+            <li>Operating Systems and Linux</li>
+            <li>Web Development</li>
+            <li>Tech Projects</li>
+        </ul>
+
+        <h2>Contact</h2>
+        <p>Feel free to reach out if you share similar interests! Aged 18+ only.</p>
+        <p>XMPP: sam@xmpp.nodemixaholic.com</p>
+    </div>
+
+    <div class="footer">
+        <p>© 2001 Sammy Lord</p>
+        <p>Last updated: <script type="text/javascript">document.write(new Date().toLocaleDateString());</script></p>
+    </div>
+</body>
+</html> 
