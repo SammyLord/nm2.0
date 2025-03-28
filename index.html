@@ -57,6 +57,15 @@
     </style>
 </head>
 <body>
+    <script>
+        // Simple check for old browsers - if this fails, it's an old browser
+        var isOldBrowser = false;
+        if (typeof document == 'undefined' || 
+            typeof document.body == 'undefined' || 
+            typeof document.body.innerHTML == 'undefined') {
+            isOldBrowser = true;
+        }
+    </script>
     <h1 id="heading" class="loading"></h1>
     <div id="content" class="loading"></div>
     <a href="bc2.html" class="next-link">Next</a>
@@ -125,13 +134,6 @@
 
         const userAgent = navigator.userAgent.replace("User-agent: ", "").replace("User agent: ", "");
         const isBot = botUserAgents.some(bot => userAgent.includes(bot));
-
-        // Simple check for old browsers - if this fails, it's an old browser
-        var isOldBrowser = false;
-        var testDiv = document.createElement('div');
-        if (!testDiv || !testDiv.innerHTML) {
-            isOldBrowser = true;
-        }
 
         if (isOldBrowser) {
             // For older browsers, redirect to the main page
