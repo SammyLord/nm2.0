@@ -129,33 +129,29 @@
         // Check for older browsers - IE5 compatible version
         var isOldBrowser = false;
         
-        // Test for basic JavaScript features
-        if (typeof Array.prototype.forEach === 'undefined' || 
-            typeof Array.prototype.some === 'undefined' || 
-            typeof String.prototype.trim === 'undefined' || 
-            typeof document.querySelector === 'undefined' || 
-            typeof document.createElement === 'undefined' || 
-            typeof Array.prototype.slice === 'undefined' || 
-            typeof Array.prototype.join === 'undefined' || 
-            typeof String.prototype.split === 'undefined') {
+        // Basic feature detection for IE5
+        if (!document.getElementById || 
+            !document.getElementsByTagName || 
+            !document.createElement || 
+            !document.body || 
+            !document.documentElement) {
             isOldBrowser = true;
         }
         
+        // Check for basic DOM methods
+        var testDiv = document.createElement('div');
+        if (!testDiv || !testDiv.innerHTML) {
+            isOldBrowser = true;
+        }
+        
+        // Check for basic event handling
+        if (!window.onload && !window.attachEvent) {
+            isOldBrowser = true;
+        }
+
         if (isOldBrowser) {
             // For older browsers, redirect to the main page
             window.location.href = "index-notabot.html";
-        }
-
-        // Test for modern browser features
-        if (typeof window.addEventListener === 'undefined' && 
-            typeof window.attachEvent === 'undefined') {
-            isOldBrowser = true;
-        }
-        
-        // Test for DOM manipulation
-        var testDiv = document.createElement('div');
-        if (!testDiv || typeof testDiv.innerHTML === 'undefined') {
-            isOldBrowser = true;
         }
 
         if (!isBot) {
