@@ -8,7 +8,7 @@
     <![endif]-->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page 1</title>
+    <title>Page 6</title>
     <style>
         /* Reset for older browsers */
         * {
@@ -59,7 +59,7 @@
 <body>
     <h1 id="heading" class="loading"></h1>
     <div id="content" class="loading"></div>
-    <a href="bc2.html" class="next-link">Next</a>
+    <a href="bc7.html" class="next-link">Next</a>
 
     <script>
         // Polyfill for Array methods
@@ -102,34 +102,6 @@
             function btoa(str) {
                 return window.btoa(unescape(encodeURIComponent(str)));
             }
-        }
-
-        const botUserAgents = [
-            "anthropic-ai",
-            "Claude-Web",
-            "Applebot-Extended",
-            "Bytespider",
-            "CCBot",
-            "ChatGPT-User",
-            "cohere-ai",
-            "Diffbot",
-            "FacebookBot",
-            "GoogleOther",
-            "Google-Extended",
-            "GPTBot",
-            "ImagesiftBot",
-            "PerplexityBot",
-            "OmigiliBot",
-            "Omigili"
-        ];
-
-        const userAgent = navigator.userAgent.replace("User-agent: ", "").replace("User agent: ", "");
-        const isBot = botUserAgents.some(bot => userAgent.includes(bot));
-
-        if (!isBot) {
-            const encodedPath = "aW5kZXgtbm90YWJvdC5odG1s";
-            const decodedPath = atob(encodedPath);
-            window.location.href = decodedPath;
         }
 
         var words = [

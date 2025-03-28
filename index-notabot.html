@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NodeMixaholic's Homepage</title>
+    <!-- Browser compatibility check - must run before other scripts -->
+    <script>
+        // Check for IE7 or below
+        var isOldIE = (function() {
+            var ua = window.navigator.userAgent;
+            var msie = ua.indexOf("MSIE ");
+            if (msie > 0) {
+                return parseInt(ua.substring(msie + 5, ua.indexOf(".", msie))) <= 7;
+            }
+            return false;
+        })();
+
+        // Check for old Netscape/Firefox
+        var isOldNetscape = (function() {
+            var ua = window.navigator.userAgent;
+            if (ua.indexOf("Netscape") > -1) {
+                var version = parseFloat(ua.substring(ua.indexOf("Netscape") + 9));
+                return version <= 5;
+            }
+            if (ua.indexOf("Firefox") > -1) {
+                var version = parseFloat(ua.substring(ua.indexOf("Firefox") + 8));
+                return version <= 3.5;
+            }
+            return false;
+        })();
+
+        // Redirect if browser is too old
+        if (isOldIE || isOldNetscape) {
+            window.location.href = "compat/index.html";
+        }
+    </script>
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Mobile redirect script - must run before other scripts -->
+    <script src="js/mobileRedirect.js"></script>
+    <script src="js/main.js" defer></script>
+    <script src="js/music.js" defer></script>
+    <style>
+        /* Basic styling */
+        body {
+            font-family: "Comic Sans MS", "Arial", sans-serif;
+            background-color: #ccccff;
+            color: #000080;
+            margin: 0;
+            padding: 0;
+            background-image: url('images/stars.gif');
+        }
+        
+        .container {
+            width: 760px;
+            margin: 0 auto;
+            border: 2px solid #9999cc;
+            background-color: #ffffff;
+            padding: 10px;
+            box-shadow: 5px 5px 10px #666666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <h1 class="site-title">Welcome to NodeMixaholic's Homepage!</h1>
+            <div class="construction">
+                <img src="images/construction.gif" alt="Under Construction">
+                <span>Site last updated: <script>document.write(new Date().toLocaleDateString());</script></span>
+            </div>
+            <marquee scrollamount="3" behavior="scroll" direction="left">Welcome to my personal homepage! Thanks for stopping by!</marquee>
+            <div class="counter">
+                <span>You are visitor #</span>
+                <span id="visitor-count">42069</span>
+            </div>
+        </header>
+
+        <nav>
+            <table class="menu-table">
+                <tr>
+                    <td><a href="index.html">Home</a></td>
+                    <td><a href="about.html">About Me</a></td>
+                    <td><a href="log/blog-posts">Archived Blog</a></td>
+                    <td><a href="log/">Log</a></td>
+                    <td><a href="links.html">Cool Links</a></td>
+                    <td><a href="compat/index.html">Compatibility Mode</a></td>
+                </tr>
+            </table>
+        </nav>
+
+        <main>
+            <section class="intro">
+                <h2>Sammy Lord - Tech, Operating Systems, and Coding!</h2>
+                <p>Hello and welcome to my personal homepage! This site is best viewed with Netscape Navigator 4.0 or Internet Explorer 5.0 at 800x600 resolution.</p>
+                <hr>
+            </section>
+
+            <section class="content">
+                <h2>About Me</h2>
+                <p>I'm NodeMixaholic (also known as Sparksammy, Sammy, or Sam), and I'm passionate about coding, Linux, and all things tech! This is my personal space on the World Wide Web where I share my projects and thoughts.</p>
+                
+                <div class="updates">
+                    <h3>My Projects:</h3>
+                    <ul>
+                        <li>Several programming experiments</li>
+                        <li>OS customization and tools</li>
+                        <li>Web development adventures</li>
+                        <li>Modern computing projects - sometimes with a retro twist!</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3>Recent Updates: <span class="blink">NEW!</span></h3>
+                    <div class="update-box">
+                        <p><b>Archived Blog Posts:</b> Check out my <a href="log/blog-posts">blog</a> for my older thoughts and experiences!</p>
+                        <p><b>Project Updates:</b> View my <a href="log/">log</a> to see what I've been working on lately and my thoughts on life.</p>
+                    </div>
+                </div>
+
+                <div>
+                    <h3>Connect With Me:</h3>
+                    <p>Feel free to reach out if you have similar interests or just want to chat about tech! (Or just about anything, really!) Aged 18 years old or above only.</p>
+                    <p><img src="images/construction.gif" width="15" height="15"> My instant messaging community: <a href="https://discord.gg/xQd4ANpTqA">sparksammy@aim.com</a></p>
+                    <p>XMPP: sam@xmpp.nodemixaholic.com</p>
+                    <p>Email: hello *at* sllord (dot) info</p>
+                </div>
+            </section>
+        </main>
+
+        <div class="webrings">
+            <h3>Proud Member Of:</h3>
+            <table class="webring-table">
+                <tr>
+                    <td><a href="#">&lt;&lt; Prev</a></td>
+                    <td>Sam's Tech Enthusiasts Webring</td>
+                    <td><a href="#">Next &gt;&gt;</a></td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <div class="quotes">
+                <p class="quote">"Find a balance between freedom, comfort, and flexibility; for there is not such thing as full freedom." <span class="quote-author">--me</span></p>
+                <p class="quote">"The AI is just a canvas. It is useless without the paints that are the prompts." <span class="quote-author">--also me</span></p>
+            </div>
+            <p>© 2001-<script>document.write(new Date().getFullYear());</script> Sammy Lord. All rights reserved.</p>
+            <p>Best viewed with Netscape Navigator or Internet Explorer</p>
+            <div class="browser-icons">
+                <img src="images/netscape.gif" alt="Netscape">
+                <img src="images/ie.gif" alt="Internet Explorer">
+            </div>
+            <p>This page is <span id="page-size">12</span>K. Last updated: <script>document.write(new Date().toLocaleDateString());</script></p>
+            <p><a href="index.html">Return to Home</a></p>
+            
+            <hr>
+            <p><b>PRO TIP:</b> Using a very old mobile phone? Check out our WAP 2.0 version at http://nodemixaholic.com/compat/wap/ for a mobile-optimized experience!</p>
+        </footer>
+    </div>
+    
+    <!-- Music is handled entirely by JavaScript -->
+</body>
+</html> 
