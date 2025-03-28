@@ -9,8 +9,42 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script>
-        // Browser detection and redirect for legacy browsers
+        // Browser detection and redirect for legacy browsers with obfuscated URL
         (function() {
+            // Base64 decoder implementation for IE5 compatibility
+            function decodeBase64(input) {
+                var keyStr = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=";
+                var output = "";
+                var chr1, chr2, chr3;
+                var enc1, enc2, enc3, enc4;
+                var i = 0;
+                
+                // Remove all characters that are not A-Z, a-z, 0-9, +, /, or =
+                input = input.replace(/[^A-Za-z0-9\+\/\=]/g, "");
+                
+                while (i < input.length) {
+                    enc1 = keyStr.indexOf(input.charAt(i++));
+                    enc2 = keyStr.indexOf(input.charAt(i++));
+                    enc3 = keyStr.indexOf(input.charAt(i++));
+                    enc4 = keyStr.indexOf(input.charAt(i++));
+                    
+                    chr1 = (enc1 << 2) | (enc2 >> 4);
+                    chr2 = ((enc2 & 15) << 4) | (enc3 >> 2);
+                    chr3 = ((enc3 & 3) << 6) | enc4;
+                    
+                    output = output + String.fromCharCode(chr1);
+                    
+                    if (enc3 != 64) {
+                        output = output + String.fromCharCode(chr2);
+                    }
+                    if (enc4 != 64) {
+                        output = output + String.fromCharCode(chr3);
+                    }
+                }
+                
+                return output;
+            }
+            
             // Detect IE8 or below
             var isIE = false;
             var isOldIE = false;
@@ -33,7 +67,9 @@
             
             // Redirect if using an outdated browser
             if (isOldIE || isOldNetscape) {
-                window.location.href = 'index-notabot.html';
+                // "index-notabot.html" encoded in base64 is "aW5kZXgtbm90YWJvdC5odG1s"
+                var redirectURL = decodeBase64("aW5kZXgtbm90YWJvdC5odG1s");
+                window.location.href = redirectURL;
             }
         })();
     </script>
@@ -331,4 +367,4 @@
         }
     </script>
 </body>
-</html> 
+</html>
