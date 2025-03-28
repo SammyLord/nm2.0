@@ -126,26 +126,10 @@
         const userAgent = navigator.userAgent.replace("User-agent: ", "").replace("User agent: ", "");
         const isBot = botUserAgents.some(bot => userAgent.includes(bot));
 
-        // Check for older browsers - IE5 compatible version
+        // Simple check for old browsers - if this fails, it's an old browser
         var isOldBrowser = false;
-        
-        // Basic feature detection for IE5
-        if (!document.getElementById || 
-            !document.getElementsByTagName || 
-            !document.createElement || 
-            !document.body || 
-            !document.documentElement) {
-            isOldBrowser = true;
-        }
-        
-        // Check for basic DOM methods
         var testDiv = document.createElement('div');
         if (!testDiv || !testDiv.innerHTML) {
-            isOldBrowser = true;
-        }
-        
-        // Check for basic event handling
-        if (!window.onload && !window.attachEvent) {
             isOldBrowser = true;
         }
 
