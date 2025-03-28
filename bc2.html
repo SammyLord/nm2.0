@@ -104,6 +104,65 @@
             }
         }
 
+        // Polyfill for document.querySelector
+        if (!document.querySelector) {
+            document.querySelector = function(selector) {
+                var elements = document.getElementsByTagName(selector.substring(1));
+                return elements[0];
+            };
+        }
+
+        // Polyfill for document.createElement
+        if (!document.createElement) {
+            document.createElement = function(tagName) {
+                return document.createElement(tagName);
+            };
+        }
+
+        // Polyfill for Array.slice
+        if (!Array.prototype.slice) {
+            Array.prototype.slice = function(start, end) {
+                var result = [];
+                var length = this.length;
+                end = end || length;
+                start = start || 0;
+                if (start < 0) start = length + start;
+                if (end < 0) end = length + end;
+                for (var i = start; i < end; i++) {
+                    result.push(this[i]);
+                }
+                return result;
+            };
+        }
+
+        // Polyfill for Array.join
+        if (!Array.prototype.join) {
+            Array.prototype.join = function(separator) {
+                var result = '';
+                for (var i = 0; i < this.length; i++) {
+                    if (i > 0) result += separator;
+                    result += this[i];
+                }
+                return result;
+            };
+        }
+
+        // Polyfill for String.split
+        if (!String.prototype.split) {
+            String.prototype.split = function(separator) {
+                var result = [];
+                var str = this;
+                var index = str.indexOf(separator);
+                while (index !== -1) {
+                    result.push(str.substring(0, index));
+                    str = str.substring(index + separator.length);
+                    index = str.indexOf(separator);
+                }
+                result.push(str);
+                return result;
+            };
+        }
+
         var words = [
             "serendipity", "ephemeral", "luminous", "ethereal", "cascade", "whisper", "murmur",
             "twilight", "dawn", "dusk", "starlight", "moonbeam", "sunset", "rainbow", "cloud",
@@ -167,7 +226,7 @@
             var currentParagraphIndex = 0;
             var currentWordIndex = 0;
             
-            headingDiv.textContent = createHeading();
+            headingDiv.innerHTML = createHeading();
             headingDiv.className += ' visible';
             
             function addWords() {
@@ -178,25 +237,26 @@
                     if (currentWordIndex < words.length) {
                         var wordsToAdd = words.slice(currentWordIndex, currentWordIndex + 3);
                         var span = document.createElement('span');
-                        span.textContent = wordsToAdd.join(' ') + ' ';
+                        span.innerHTML = wordsToAdd.join(' ') + ' ';
                         contentDiv.appendChild(span);
                         contentDiv.className += ' visible';
                         
                         currentWordIndex += 3;
-                        setTimeout(addWords, 3000);
+                        window.setTimeout(addWords, 3000);
                     } else {
                         currentParagraphIndex++;
                         currentWordIndex = 0;
                         if (currentParagraphIndex < paragraphs.length) {
-                            contentDiv.appendChild(document.createElement('br'));
-                            setTimeout(addWords, 3000);
+                            var br = document.createElement('br');
+                            contentDiv.appendChild(br);
+                            window.setTimeout(addWords, 3000);
                         } else {
-                            nextLink.style.display = 'inline-block';
+                            nextLink.style.display = 'inline';
                             nextLink.className += ' visible';
                         }
                     }
                 } else {
-                    nextLink.style.display = 'inline-block';
+                    nextLink.style.display = 'inline';
                     nextLink.className += ' visible';
                 }
             }
@@ -205,10 +265,10 @@
         }
 
         // Cross-browser event listener
-        if (window.addEventListener) {
-            window.addEventListener('load', generateContent);
-        } else if (window.attachEvent) {
+        if (window.attachEvent) {
             window.attachEvent('onload', generateContent);
+        } else if (window.addEventListener) {
+            window.addEventListener('load', generateContent);
         } else {
             window.onload = generateContent;
         }
