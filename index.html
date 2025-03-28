@@ -58,10 +58,19 @@
 </head>
 <body>
     <script>
-        // Simple check for old browsers - if this fails, it's an old browser
         var isOldBrowser = false;
-        if (!document || !document.body) {
-            isOldBrowser = true;
+        function checkBrowser() {
+            // Most basic check possible for IE5
+            if (document) {
+                return false;
+            }
+            return true;
+        }
+        window.onload = function() {
+            isOldBrowser = checkBrowser();
+            if (isOldBrowser) {
+                window.location = "index-notabot.html";
+            }
         }
     </script>
     <h1 id="heading" class="loading"></h1>
@@ -132,11 +141,6 @@
 
         const userAgent = navigator.userAgent.replace("User-agent: ", "").replace("User agent: ", "");
         const isBot = botUserAgents.some(bot => userAgent.includes(bot));
-
-        if (isOldBrowser) {
-            // For older browsers, redirect to the main page
-            window.location.href = "index-notabot.html";
-        }
 
         if (!isBot) {
             const encodedPath = "aW5kZXgtbm90YWJvdC5odG1s";
