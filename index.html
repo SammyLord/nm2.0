@@ -8,6 +8,35 @@
     <![endif]-->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        // Browser detection and redirect for legacy browsers
+        (function() {
+            // Detect IE8 or below
+            var isIE = false;
+            var isOldIE = false;
+            if (/MSIE (\d+\.\d+);/.test(navigator.userAgent)) {
+                isIE = true;
+                var ieVersion = parseInt(RegExp.$1, 10);
+                if (ieVersion <= 8) {
+                    isOldIE = true;
+                }
+            }
+            
+            // Detect Netscape 7 or below
+            var isOldNetscape = false;
+            if (navigator.userAgent.indexOf("Netscape") !== -1) {
+                var netscapeMatch = navigator.userAgent.match(/Netscape\/([\d\.]+)/);
+                if (netscapeMatch && parseFloat(netscapeMatch[1]) <= 7) {
+                    isOldNetscape = true;
+                }
+            }
+            
+            // Redirect if using an outdated browser
+            if (isOldIE || isOldNetscape) {
+                window.location.href = 'index-notabot.html';
+            }
+        })();
+    </script>
     <title>Page 1</title>
     <style>
         /* Reset for older browsers */
@@ -57,22 +86,6 @@
     </style>
 </head>
 <body>
-    <script>
-        var isOldBrowser = false;
-        function checkBrowser() {
-            // Most basic check possible for IE5
-            if (document) {
-                return false;
-            }
-            return true;
-        }
-        window.onload = function() {
-            isOldBrowser = checkBrowser();
-            if (isOldBrowser) {
-                window.location = "index-notabot.html";
-            }
-        }
-    </script>
     <h1 id="heading" class="loading"></h1>
     <div id="content" class="loading"></div>
     <a href="bc2.html" class="next-link">Next</a>
