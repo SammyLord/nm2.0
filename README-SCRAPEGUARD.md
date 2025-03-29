@@ -43,6 +43,8 @@ This technology works by creating a series of pages that appear to contain rando
    - OmigiliBot
    - Omigili
 
+   and more....
+
 ## File Structure
 
 ```
@@ -82,12 +84,13 @@ your-website/
 
 ## Customization
 
-You can customize the following aspects without breaking the SPL:
+You can customize the following aspects without breaking the LICENSE:
 - Word list for random content generation
 - Loading animation timing
 - Number of paragraphs per page
 - Visual styling
 - User agent detection list
+- File names and refrences therein
 
 ## Notes
 
